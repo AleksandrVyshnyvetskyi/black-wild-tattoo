@@ -57,6 +57,11 @@ img {
     margin: 0 auto;
     padding: 45px 30px;
 }
+.main-contend-header{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #1A1A1A;
+}
 
 /* Header START */
 
@@ -66,7 +71,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1A1A1A;
 }
 
 .nav__box {
@@ -78,7 +82,7 @@ img {
     font-size: 18px;
     line-height: 1.44;
     font-weight: 300;
-    margin-right: 29px;
+    margin-right: 40px;
 }
 
 .nav__item:last-child {
@@ -154,13 +158,19 @@ img {
 
 /* Main content START */
 /* Hero Start */
+.main-contend-hero {
+    max-width: 1920px;
+    margin: 0 auto;
+    /* background-color: #1A1A1A; */
+    background-image: url(./img/texture_background.jpg);
+}
+
 .container-hero {
     display: flex;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
-    background-color: #1A1A1A;
 }
 
 .hero img {
@@ -178,6 +188,8 @@ img {
     font-weight: 300;
     color: var(--text-white);
 }
+
+
 .hero__text p {
     font-size: 24px;
 }
@@ -189,10 +201,15 @@ img {
 
 /* About STAR */
 
+.main-contend-about {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(./img/bg-img.png);
+}
+
 .container-about {
     display: flex;
     justify-content: center;
-    background-color: var(--main-bgd-color);
 }
 
 .about {
@@ -282,4 +299,185 @@ img {
 }
 /* About END */
 
+/* Tattoo proces START */
+
+.main-contend-proces{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--text-black);
+}
+
+.conteiner-proces {
+    max-width: 1200px;
+    margin: 150px auto 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-img{
+display: block;
+}
+
+.proces__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    line-height: 1.48;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.circle-box-white {
+    width: 185px;
+    height: 18px;
+    padding-top: 10px;
+    border-top: 1px solid var(--text-white);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.circle-white {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-white);
+    position: relative;
+}
+
+.circle-white::after{
+    content: '';
+    position: absolute;
+    width: 19px;
+    border-bottom: 1px solid var(--text-white);
+    left: 19px;
+    bottom: 4px;
+}
+
+.circle-white::before {
+    content: '';
+    position: absolute;
+    width: 19px;
+    border-bottom: 1px solid var(--text-white);
+    right: 19px;
+    bottom: 4px;
+}
+/* Tattoo proces END */
+/* Says START */
+.main-content--says {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 150px 0;
+    background-image: url(./img/bg-img.png);
+}
+
+.says-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.img-say {
+    margin-bottom: 100px;
+}
+
+.says--text {
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.58;
+    width: 730px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.says-box p {
+    font-family: 'Amiri', serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.77;
+}
+/* Says END */
+/* My work START */
+.main-content--work{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--text-black);
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+}
+
+.work__title {
+    font-family: 'Oswald', sans-serif;
+    font-style: bolt;
+    font-size: 60px;
+    line-height: 1.48;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.work__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1110px;
+}
+
+.work__item {
+    border: 2px solid var(--text-white);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 30px;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.work__item img {
+    border-radius: 20px;
+}
+
+.work__item:hover {
+    transform: scale(2);
+    border: 2px solid var(--theme-accent);
+}
+
+.work .btn {
+    background-image: url(./img/bgd-btn-white.png);
+    background-color: var(--text-black);
+    width: 472px;
+    height: 127px;
+    border: 0;
+    border-radius: 30px;
+font-family: 'Amiri', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33;
+    color: var(--text-black);
+    cursor: pointer;
+    border: 2px solid var(--text-black);
+}
+
+.work .btn:hover,.btn:focus {
+    border: 2px solid var(--theme-accent);
+}
+/* My work END */
+.say--title {
+    font-family: 'Oswald', sans-serif;
+    font-style: bolt;
+    font-size: 60px;
+    line-height: 1.48;
+    color: var(--text-black);
+    margin-bottom: 20px;
+}
 /* Main content END */
