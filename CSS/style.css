@@ -102,6 +102,10 @@ img {
     color: var(--text-white);
 }
 
+.svg {
+    fill: #FFFFFF;
+}
+
 /* Header company END */
 
 /* Header social link START */
@@ -441,10 +445,14 @@ display: block;
     margin: 30px;
     transition: all 0.7s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .work__item img {
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 
 .work__item:hover {
