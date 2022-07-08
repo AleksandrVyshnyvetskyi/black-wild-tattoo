@@ -55,7 +55,7 @@ img {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 45px 30px;
+    padding: 30px 30px;
 }
 .main-contend-header{
     max-width: 1920px;
@@ -63,6 +63,20 @@ img {
     background-color: #1A1A1A;
 }
 
+.bgd-home {
+    background-image: url(./img/texture_background.jpg);
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    line-height: 1.48;
+    font-weight: 700;
+}
+
+.text {
+
+}
 /* Header START */
 
 .header {
@@ -169,19 +183,13 @@ img {
 
 /* Main content START */
 /* Hero Start */
-.main-contend-hero {
-    max-width: 1920px;
-    margin: 0 auto;
-    /* background-color: #1A1A1A; */
-    background-image: url(./img/texture_background.jpg);
-}
 
-.container-hero {
+
+.hero {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero img {
