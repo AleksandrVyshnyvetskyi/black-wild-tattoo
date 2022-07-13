@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
     width: 10px;
     background-color: var(--bg-black-50);
-    }
+}
     
-    ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
         background-color: var(--theme-accent);
         border-radius: 5px;
-    }
+}
 
 :root {
     /* основной цвет текста */
@@ -319,9 +319,9 @@ img {
 .about__item .btn {
     width: 472px;
     height: 127px;
-    border: 0;
     border-radius: 30px;
     margin-bottom: 40px;
+    border: 0;
     background-image: url(./img/bgd-btn.png);
     font-family: 'Amiri', serif;
     font-size: 24px;
@@ -333,6 +333,7 @@ img {
 
 .about__item .btn:hover,.btn:focus {
     color: var(--theme-accent);
+    border: 0;
 }
 
 /* About END */
@@ -523,6 +524,7 @@ img {
 }
 
 /* Contact END */
+/* Modal START */
 
 .modal-conteiner {
     position: fixed;
@@ -547,9 +549,9 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .close-icon {
+}
+
+.close-icon {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -557,9 +559,9 @@ img {
     border: none;
     outline: none;
     cursor: pointer;
-  }
-  
-  .model-form-title {
+}
+
+.model-form-title {
     color: var(--theme-accent);
     font-family: 'Amiri', serif;
     font-size: 24px;
@@ -567,9 +569,9 @@ img {
     line-height: 1.77;
     margin-bottom: 4px;
     text-align: center;
-  }
-  
-  .modal-form-text {
+}
+
+.modal-form-text {
     font-family: 'Amiri', serif;
     font-size: 20px;
     font-weight: 400;
@@ -577,33 +579,33 @@ img {
     text-align: center;
     color: var(--text-white);
     margin-bottom: 32px;
-  }
-  
-  .model-form-field {
+}
+
+.model-form-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-  }
-  
-  .model-form-field-label {
+}
+
+.model-form-field-label {
     font-family: 'Amiri', serif;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 4px;
     color: var(--text-white);
-  }
-  
-  .model-form-text {
+}
+
+.model-form-text {
     font-family: 'Amiri', serif;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 4px;
     color: var(--theme-main);
     text-align: center;
-  }
-  
-  .model-form-name,
-  .model-form-email {
+}
+
+.model-form-name,
+.model-form-email {
     width: 440px;
     height: 40px;
     border: 1px solid var(--theme-accent);
@@ -611,9 +613,9 @@ img {
     outline: none;
     padding: 4px;
     box-sizing: border-box;
-  }
-  
-  .model-form-sabmit {
+}
+
+.model-form-sabmit {
     border: 0;
     outline: 0;
     padding: 16px 32px 16px 32px;
@@ -622,14 +624,14 @@ img {
     cursor: pointer;
     margin-top: 16px;
     color: var(--theme-btn-text);
-  }
-  
-  .modal-active {
+}
+
+.modal-active {
     opacity: 1;
     pointer-events: all;
-  }
-  
-  .modal-succes {
+}
+
+.modal-succes {
     padding: 80px 40px 88px 40px;
     border-radius: 10px;
     background-color: var(--bgd-color);
@@ -638,9 +640,9 @@ img {
     flex-direction: column;
     align-items: center;
     width: 600px;
-  }
-  
-  .modal-succes-title {
+}
+
+.modal-succes-title {
     color: var(--theme-accent);
     font-family: 'Amiri', serif;
     font-weight: bold;
@@ -648,16 +650,18 @@ img {
     line-height: 24px;
     margin-bottom: 40px;
     text-align: center;
-  }
-  
-  .modal-succes-text {
+}
+
+.modal-succes-text {
     font-family: 'Amiri', serif;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 36px;
     color: var(--theme-accent);
     text-align: center;
-  }
+}
+
+/* Modal END */
 
 @media (max-width:768px) {
 
