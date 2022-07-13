@@ -15,16 +15,8 @@
     --text-black: #000000;
     /* цвет-акцент */
     --theme-accent: #f3b121;
-    /* основной цвет фона */
-    --main-bgd-color: #fff;
     /* вторичный цвет фона */
     --bgd-color: #2f303a;
-    /* цвет фона кнопок */
-    --bgd-button-color: #f5f4fa;
-    /* цвет иконок */
-    --svg-color: #afb1b8;
-    /* Фон модалки */
-    --bgd-modal: #afb1b8;
 }
 
 body{
@@ -36,15 +28,7 @@ a {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
+h1, h2, h3, h4, h5, h6, p, ul, ol {
     margin: 0;
     padding: 0;
 }
