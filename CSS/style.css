@@ -329,6 +329,7 @@ img {
     line-height: 1.33;
     color: var(--text-white);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .about__item .btn:hover,.btn:focus {
@@ -391,6 +392,10 @@ img {
     max-width: 730px;
     text-align: center;
     margin-bottom: 50px;
+}
+
+.author {
+    margin-bottom: 15px ;
 }
 
 .says-box p {
@@ -459,6 +464,7 @@ img {
     line-height: 1.33;
     color: var(--text-black);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn:hover,.btn:focus {
@@ -493,28 +499,54 @@ img {
 }
 
 .contact__link {
-    font-family: 'Amiri', serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 0.66;
-    margin-bottom: 50px;
+    color: var(--text-white);
+    display: flex;
+    margin-bottom: 60px;
 }
 
-.contact-box h3 {
-    font-family: 'Amiri', serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.77;
-    margin-bottom: 30px;
+.contact__link--item {
+    width: 73px;
+    font-size: 16px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-box p {
-    font-style: italic;
-    margin-bottom: 50px;
+.contact__link--item:last-child {
+    margin-right: 0;
+}
+
+.contact__link--icon {
+    width: 44px;
+    height: 44px;
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--text-white);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    ransition-property: color, border, transform;
+    transition-duration: 250ms;
+    transition: transform 1250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__link--icon:hover {
+    color: var(--theme-accent);
+    border: 2px solid var(--theme-accent);
+    transform: rotateZ(360deg);
+}
+
+.icon-svg {
+    width: 30px;
+    fill: currentColor;
 }
 
 .btn a {
     color: var(--text-black);
+    transition: all 0.3s ease;
 }
 
 .created {
@@ -737,6 +769,7 @@ img {
     border: 2px solid black;
     font-size: 20px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     }
 
     .about .btn:focus {
@@ -816,6 +849,7 @@ img {
         border: 2px solid black;
         font-size: 20px;
         margin-bottom: 20px;
+        transition: all 0.3s ease;
     }
 
     .btn:focus {
@@ -840,15 +874,6 @@ img {
         font-weight: 400;
         line-height: 1.44;
         margin-bottom: 20px;
-    }
-
-    .contact h3 {
-        margin-bottom: 20px;
-    }
-
-    .contact p {
-        margin-bottom: 20px;
-        width: 280px;
     }
 
     /* Contact mobile END */
@@ -898,3 +923,26 @@ img {
     }
 }
 /* Main content END */
+
+
+/* .icon-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  } */
+  
+  /* ==========================================
+  Single-colored icons can be modified like so:
+  .icon-svgname {
+    font-size: 32px;
+    color: red;
+  }
+  ========================================== */
+  
+  /* .icon-svgsmartphone_icon {
+    width: 0.625em;
+  } */
+  

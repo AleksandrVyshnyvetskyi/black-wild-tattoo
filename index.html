@@ -108,7 +108,7 @@
                     <p class="text about__text">Ціни по телефону, за запитом або на сайті.</p>
                 </li>
                 <li class="about__item">
-                    <button class="btn" type="button">Дiзнатися бiльше</button>
+                    <button class="btn" type="button" id="call-form-btn">Дiзнатися бiльше</button>
                 </li>
             </ul>
         </div>
@@ -140,9 +140,9 @@
             <div class="circle-box">
                 <div class="circle"></div>
             </div>
-            <h2 class="text says__text">“Випийте кулінарну їжу, тоді я буду служити тобі”</h2>
-            <img class="author" src="./CSS/img/author.jpg" alt="Felix Hohleich" width="193px">
-            <p class="text">Фелікс Хохлейх (керуючий директор)</p>
+            <h2 class="text says__text">“Я гадаю, що тiло - це в якомусь сенсi щоденник”</h2>
+            <img class="author" src="./CSS/img/autograph_Depp.png" alt="Johnny Depp's autograph" width="193px">
+            <p class="text">Джоннi Депп</p>
         </div>
     </div>
 
@@ -198,9 +198,9 @@
             <div class="circle-box">
                 <div class="circle"></div>
             </div>
-            <h2 class="says__text text">“Tattoo Clubs — найкраще місце для джентльмена.”</h2>
-            <img class="author" src="./CSS/img/author.jpg" alt="Felix Hohleich" width="193px">
-            <p>Фелікс Хохлейх (керуючий директор)</p>
+            <h2 class="says__text text">“Для мене татуювання це все мить мого життя. Є миті, про які хочеться не забути.”</h2>
+            <img class="author" src="./CSS/img/autograph_Joli.png" alt="Angelina Jolie's autograph" width="193px">
+            <p>Анджеліна Джолі</p>
         </div>
     </div>
 
@@ -217,15 +217,33 @@
                         <div class="circle-box-white">
                             <div class="circle-white"></div>
                         </div>
-                        <a class="link contact__link" href="tel:+380505687876">+38 (050) 568 78 76</a>
-                        <h3>About Us</h3>
-                        <p class="text">Tristique semper neque, orci rhoncus ut tempor.</p>
-                        <p class="text">Tristique semper neque, orci rhoncus ut tempor. 
-                            Convallis augue lorem magna venenatis sit diam commodo.</p>
-                        <p class="text">Tristique semper neque, orci rhoncus ut tempor. 
-                            Convallis augue lorem magna venenatis sit diam commodo. Enim, sem sed iaculis 
-                            urna tempus vitae. </p>
-                            <button class="btn"><a target="_blank" href="https://goo.gl/maps/wdFm7C2uxr1xir727">Location</a></button>
+                        <ul class="contact__link">
+                            <li class="contact__link--item">
+                                <a class="contact__link--icon" href="tel:+380505687876">
+                                    <svg class="icon-svg" width="40px" height="40px">
+                                        <use href="./CSS/img/svg/symbol-defs.svg#icon-phone"></use>
+                                    </svg>
+                                </a>
+                                Call me
+                            </li>
+                            <li class="contact__link--item">
+                                <a class="contact__link--icon" href="https://telegram.me/drag0n_heart" target="_blank">
+                                    <svg class="icon-svg" width="40px" height="40px">
+                                        <use href="./CSS/img/svg/symbol-defs.svg#icon-telegram"></use>
+                                    </svg>
+                                </a>
+                                Telegramm
+                            </li>
+                            <li class="contact__link--item">
+                                <a class="contact__link--icon" href="https://www.instagram.com/black.wild_tattoo" target="_blank">
+                                    <svg class="icon-svg" width="40px" height="40px">
+                                        <use xlink:href="./CSS/img/svg/symbol-defs.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                                Instagram
+                            </li>
+                        </ul>
+                        <button class="btn"><a target="_blank" href="https://goo.gl/maps/wdFm7C2uxr1xir727">Location</a></button>
                     </div>
             </div>
             <div class="created">
@@ -286,3 +304,5 @@
     <script src="./js//form.js"></script>
     </body>
 </html>
+
+
