@@ -196,6 +196,7 @@ img {
     justify-content: space-around;
     align-items: center;
     padding: 30px 30px;
+    position: relative;
 }
 
 /* Header nav START */
@@ -229,6 +230,52 @@ img {
 }
 
 /* Header company END */
+/* Hamburger menu START */
+
+.hamburger {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.44;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--text-black);
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+.hamburger .hamburger__line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-block: 6px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+.hamburger.active .hamburger__line:nth-child(1) {
+    transform: translateY(9px) 
+    rotate(45deg);
+}
+
+.hamburger.active .hamburger__line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger__line:nth-child(3) {
+    transform: translateY(-9px) 
+    rotate(-45deg);
+}
+
+/* Hamburger menu END */
 /* Header social link START */
 
 .soc-link__box {
@@ -699,10 +746,19 @@ img {
 
 @media (max-width:1023px) {
     .header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        background-color: var(--theme-accent);
+        border-bottom: 2px solid var(--text-black);
+        margin-bottom: 20px;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
         }
+
+    .hero {
+        padding-top: 100px;
+    }
+
     .nav, .soc-link {
         display: none;
     }
@@ -716,13 +772,39 @@ img {
         height: 280px;
         /* height: 300px; */
     }
+
+    .black-wild {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        font-size: 24px;
+    }
 }
 
 @media (max-width:767px) {
 
+    .header {
+    width: 100%;
+    background-color: var(--theme-accent);
+    border-bottom: 2px solid var(--text-black);
+    margin-bottom: 20px;
+    padding: 0;
+    position: fixed;
+    z-index: 99;
+    }
+
     .black-wild h1 {
-        font-size: 24px;
+        /* font-size: 24px;
         line-height: 1.44;
+        color: var(--text-black); */
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        font-size: 16px ;
     }
 
     .title {
@@ -747,6 +829,7 @@ img {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-top: 80px;
     }
 
     .hero img {
