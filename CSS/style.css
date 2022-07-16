@@ -232,7 +232,7 @@ img {
 /* Header company END */
 /* Hamburger menu START */
 .mobile-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 767px;
@@ -256,7 +256,7 @@ img {
     font-size: 14px;
     color: var(--text-black);
     background-color: var(--theme-accent);
-    border-bottom: 2px solid var(--text-black);
+    /* border-bottom: 2px solid var(--text-black); */
     display: none;
     align-items: center;
     justify-content: space-evenly;
@@ -296,7 +296,6 @@ img {
     transform: translateY(-100%);
     transition: transform 0.5s; 
     opacity: 0;
-
 }
 
 .dropdown-menu.open {
@@ -310,7 +309,7 @@ img {
 .dropdown-menu__item {
     width: 595px;
     height: 40px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-color: #fff;
@@ -819,6 +818,19 @@ img {
         z-index: 99;
         }
 
+    .mobile-menu {
+            display: flex;
+    }
+
+    .dropdown-menu.open {
+        top: 75px;
+    }
+
+    .dropdown-menu__item {
+        width: 580px;
+        display: flex;
+    }
+
     .hero {
         padding-top: 100px;
     }
@@ -857,6 +869,10 @@ img {
     z-index: 99;
     }
 
+    .mobile-menu {
+        display: flex;
+    }
+
     .black-wild h1 {
         /* font-size: 24px;
         line-height: 1.44;
@@ -869,8 +885,13 @@ img {
         font-size: 16px ;
     }
 
+    .dropdown-menu.open {
+        top: 58px;
+    }
+
     .dropdown-menu__item {
         width: 340px;
+        display: flex;
     }
 
     .title {
