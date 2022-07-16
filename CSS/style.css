@@ -236,9 +236,13 @@ img {
     flex-direction: column;
     align-items: center;
     width: 767px;
+    position: relative;
+    z-index: 9;
 }
 
 .hamburger {
+    position: relative;
+    z-index: 15;
     width: 100%;
     height: 100%;
     padding: 10px 0;
@@ -251,10 +255,12 @@ img {
     text-transform: uppercase;
     font-size: 14px;
     color: var(--text-black);
+    background-color: var(--theme-accent);
+    border-bottom: 2px solid var(--text-black);
     display: none;
     align-items: center;
     justify-content: space-evenly;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 .hamburger .hamburger__line {
@@ -282,12 +288,51 @@ img {
 }
 
 .dropdown-menu {
-    /* display: none; */
+    position: absolute;
+    z-index: 9;
+    top: 58px;
+    z-index: 5;
+    padding: 15px;
+    transform: translateY(-100%);
+    transition: transform 0.5s; 
+    opacity: 0;
+
 }
 
+.dropdown-menu.open {
+	transform: translateY(0);
+    top: 58px;
+    background-color: var(--theme-accent);
+    opacity: 1;
+}
+
+
 .dropdown-menu__item {
-background-color: #fff;
-border: 1px solid black;
+    width: 595px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid black;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu__item a {
+    font-size: 20px ;
+    line-height: 1.44;
+    font-weight: 700;
+    color: var(--text-black);
+}
+
+.dropdown-menu__item:hover {
+    background-color: #2f303a;
+}
+
+.dropdown-menu__item:hover  a{
+    color: var(--text-white);
 }
 
 .menu-active {
@@ -806,8 +851,6 @@ border: 1px solid black;
 
     .header {
     width: 100%;
-    background-color: var(--theme-accent);
-    border-bottom: 2px solid var(--text-black);
     margin-bottom: 20px;
     padding: 0;
     position: fixed;
@@ -824,6 +867,10 @@ border: 1px solid black;
     .hamburger {
         display: flex;
         font-size: 16px ;
+    }
+
+    .dropdown-menu__item {
+        width: 340px;
     }
 
     .title {
