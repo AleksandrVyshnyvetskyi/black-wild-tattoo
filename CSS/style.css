@@ -231,6 +231,12 @@ img {
 
 /* Header company END */
 /* Hamburger menu START */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 767px;
+}
 
 .hamburger {
     width: 100%;
@@ -247,7 +253,7 @@ img {
     color: var(--text-black);
     display: none;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: transparent;
 }
 
@@ -273,6 +279,19 @@ img {
 .hamburger.active .hamburger__line:nth-child(3) {
     transform: translateY(-9px) 
     rotate(-45deg);
+}
+
+.dropdown-menu {
+    /* display: none; */
+}
+
+.dropdown-menu__item {
+background-color: #fff;
+border: 1px solid black;
+}
+
+.menu-active {
+    display: block;
 }
 
 /* Hamburger menu END */

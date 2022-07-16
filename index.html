@@ -43,7 +43,8 @@
                 </div>
                 <!-- ===== Company END ===== -->
                 <!-- ===== Mobile btn START ===== -->
-                <button class="hamburger"  type="button">
+                <div class="mobile-menu">
+                    <button class="hamburger dropdown-menu__btn" data-path="burger-open"  type="button">
                         <div>
                             <span class="hamburger__line"></span>
                             <span class="hamburger__line"></span>
@@ -55,7 +56,22 @@
                             <span class="hamburger__line"></span>
                             <span class="hamburger__line"></span>
                         </div>
-                </button>
+                    </button>
+                    <ul class="dropdown-menu" datd-target="burger-open">
+                            <li class="dropdown-menu__item">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li class="dropdown-menu__item">
+                                <a href="#about">About Us</a>
+                            </li>
+                            <li class="dropdown-menu__item">
+                                <a href="#works">Works</a>
+                            </li>
+                            <li class="dropdown-menu__item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                    </ul>
+                </div>
                 <!-- ===== Mobile btn END ===== -->
                 <!-- ===== Social links START ===== -->
                 <div class="soc-link">
