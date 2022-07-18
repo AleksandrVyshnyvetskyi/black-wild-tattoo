@@ -63,7 +63,7 @@ img {
 }
 
 .text {
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.77;
@@ -256,7 +256,7 @@ img {
     font-size: 14px;
     color: var(--text-black);
     background-color: var(--theme-accent);
-    border-bottom: 2px solid var(--text-black);
+    /* border-bottom: 2px solid var(--text-black); */
     display: none;
     align-items: center;
     justify-content: space-evenly;
@@ -401,7 +401,7 @@ img {
 /* About START */
 
 .container--about {
-    background-image: url(./img/bg/bg-img.png);
+    background-image: url(./img/bg/bg-img.jpg);
 }
 
 .about {
@@ -422,6 +422,7 @@ img {
 .about__text {
     color: var(--text-black);
     margin-bottom: 30px;
+    font-size: 20px;
 }
 
 .about__title {
@@ -435,8 +436,8 @@ img {
     border-radius: 30px;
     margin-bottom: 40px;
     border: 0;
-    background-image: url(./img/bg/bgd-btn.png);
-    font-family: 'Amiri', serif;
+    background-image: url(./img/bg/bgd-btn.jpg);
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.33;
@@ -472,6 +473,7 @@ img {
 .proces iframe {
     width: 560px;
     height: 315px;
+    border: 1px solid var(--text-white);
 }
 
 /* Tattoo proces END */
@@ -479,7 +481,7 @@ img {
 
 .container--says {
     padding: 150px 0;
-    background-image: url(./img/bg/bg-img.png);
+    background-image: url(./img/bg/bg-img.jpg);
 }
 
 .says {
@@ -572,7 +574,7 @@ img {
     height: 127px;
     border: 2px solid var(--text-black);
     border-radius: 30px;
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.33;
@@ -658,9 +660,16 @@ img {
     fill: currentColor;
 }
 
-.btn a {
+.contact .btn {
     color: var(--text-black);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .btn:hover {
+    color: var(--theme-accent);
 }
 
 .created {
@@ -709,7 +718,7 @@ img {
 
 .model-form-title {
     color: var(--theme-accent);
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.77;
@@ -718,7 +727,7 @@ img {
 }
 
 .modal-form-text {
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.77;
@@ -734,7 +743,7 @@ img {
 }
 
 .model-form-field-label {
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 4px;
@@ -742,7 +751,7 @@ img {
 }
 
 .model-form-text {
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 4px;
@@ -790,7 +799,7 @@ img {
 
 .modal-succes-title {
     color: var(--theme-accent);
-    font-family: 'Amiri', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: bold;
     font-size: 32px;
     line-height: 24px;
@@ -799,7 +808,7 @@ img {
 }
 
 .modal-succes-text {
-    font-family: 'Amiri', serif;
+    font-family: 'AEB Garamond', serif;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 36px;
@@ -813,11 +822,11 @@ img {
     .header {
         width: 100%;
         background-color: var(--theme-accent);
-        /* border-bottom: 2px solid var(--text-black); */
+        border-bottom: 2px solid var(--text-black);
         margin-bottom: 20px;
         padding: 0;
         position: fixed;
-        z-index: 99;
+        z-index: 8;
         }
 
     .mobile-menu {
