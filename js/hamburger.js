@@ -1,18 +1,17 @@
 // BTN
 
-const hamburgerMenu = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector(".hamburger");
 const menuIsActive = () => {
-    hamburgerMenu.classList.toggle('active');
+  hamburgerMenu.classList.toggle("active");
 };
-hamburgerMenu.addEventListener('click', menuIsActive)
-
+hamburgerMenu.addEventListener("click", menuIsActive);
 
 // MENU
 
-let menuBtn = document.querySelector('.dropdown-menu__btn');
-let menu = document.querySelector('.dropdown-menu');
+let menuBtn = document.querySelector(".dropdown-menu__btn");
+let menu = document.querySelector(".dropdown-menu");
 
-menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('open');
-	menu.classList.toggle('open');
-})
+menuBtn.addEventListener("click", function () {
+  menuBtn.classList.toggle("open");
+  menu.classList.toggle("open");
+});

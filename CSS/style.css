@@ -16,7 +16,7 @@
     /* цвет-акцент */
     --theme-accent: #f3b121;
     /* вторичный цвет фона */
-    --bgd-color: #2f303a;
+    --bgd-color: #000;
 }
 
 body{
@@ -45,14 +45,6 @@ img {
 .container {
     max-width: 1920px;
     margin: 0 auto;
-}
-
-.bgd-home {
-    background-image: url(./img/bg/texture_background.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    margin: 0 auto;
-    max-width: 1920px;
 }
 
 .title {
@@ -196,7 +188,11 @@ img {
     justify-content: space-around;
     align-items: center;
     padding: 30px 30px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
 }
 
 /* Header nav START */
@@ -368,9 +364,30 @@ img {
     align-items: center;
 }
 
-.hero img {
+/* .hero img {
     border-radius: 15px;
     max-width: 570px;
+} */
+
+.hero__video-section{
+    width: 100%;
+}
+
+.hero__video-section::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0
+    , 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.hero__video{
+    width: 100%;
 }
 
 .hero__title {
@@ -386,6 +403,8 @@ img {
     flex-direction: column;
     align-items: center;
     padding:15px;
+    position: absolute;
+    z-index: 3;
 }
 
 .hero__text {
@@ -402,6 +421,8 @@ img {
 
 .container--about {
     background-image: url(./img/bg/bg-img.jpg);
+    position: relative;
+    z-index: 2;
 }
 
 .about {
@@ -456,6 +477,8 @@ img {
 
 .container--proces{
     background-color: var(--text-black);
+    position: relative;
+    z-index: 2;
 }
 
 .proces {
@@ -823,10 +846,11 @@ img {
         width: 100%;
         background-color: var(--theme-accent);
         border-bottom: 2px solid var(--text-black);
-        margin-bottom: 20px;
         padding: 0;
         position: fixed;
-        z-index: 8;
+        z-index: 3;
+        right: 0;
+        left: 0;
         }
 
     .mobile-menu {
@@ -1164,3 +1188,4 @@ textarea.form__input {
     min-height: 120px;
     resize: vertical;
 }
+
