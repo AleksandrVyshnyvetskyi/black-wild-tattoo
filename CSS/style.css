@@ -371,6 +371,10 @@ img {
 
 .hero__video-section{
     width: 100%;
+    background-image: url(./video/promo.PNG);
+    background-position: center;
+    mask-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero__video-section::after{
