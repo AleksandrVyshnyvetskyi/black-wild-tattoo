@@ -404,6 +404,9 @@ img {
     line-height: 1.44;
     font-weight: 700;
     color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero__message{
@@ -421,6 +424,7 @@ img {
     line-height: 1.44;
     font-weight: 300;
     color: var(--text-white);
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -428,8 +432,9 @@ img {
 /* About START */
 
 .container--about {
-    background-image: url(./img/bg/bg-img.jpg);
-    position: relative;
+    background-image: url(./img/bg/bg-img.png);
+    padding: 75px 0;
+    /* position: relative; */
     /* z-index: 2; */
 }
 
@@ -486,11 +491,11 @@ img {
 .container--proces{
     background-color: var(--text-black);
     position: relative;
-    /* z-index: 2; */
+    padding: 150px 0;
 }
 
 .proces {
-    margin: 75px auto;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -510,9 +515,19 @@ img {
 /* Tattoo proces END */
 /* Says START */
 
+.bg-img-top{
+    position: absolute;
+    top: -1px;
+}
+
+.bg-img-bottom{
+    position: absolute;
+    bottom: -1px;
+}
+
 .container--says {
-    padding: 150px 0;
     background-image: url(./img/bg/bg-img.jpg);
+    padding: 150px 0;
 }
 
 .says {
@@ -553,6 +568,8 @@ img {
 
 .container--work{
     background-color: var(--text-black);
+    position: relative;
+    padding: 150px 0;
 }
 
 .work {
@@ -624,6 +641,8 @@ img {
 
 .container--contact {
     background-color: var(--text-black);
+    position: relative;
+    padding: 150px 0;
 }
 
 .contact {
@@ -876,7 +895,6 @@ img {
     }
 
     .hero {
-        padding-top: 80px;
         overflow: hidden;
     }
 
@@ -915,7 +933,7 @@ img {
 
     .header {
     width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding: 0;
     position: fixed;
     z-index: 99;
@@ -968,7 +986,6 @@ img {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 60px;
     }
 
     .hero__video{
@@ -990,7 +1007,6 @@ img {
     }
 
     .hero__text {
-        margin-top: 30px;
         font-size: 24px;
         line-height: 1.44;
         font-weight: 300;
@@ -1003,10 +1019,12 @@ img {
         width: 280px;
         padding: 15px;
         margin-top: 30px;
+
     }
 
     .about__text {
         margin-bottom: 30px;
+        font-size: 20px;
     }
 
     .about .btn {
