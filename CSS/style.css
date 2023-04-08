@@ -376,6 +376,8 @@ img {
     background-position: center;
     mask-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .hero__video-section::after{
@@ -392,6 +394,7 @@ img {
 }
 
 .hero__video{
+    display: block;
     width: 100%;
 }
 
@@ -977,18 +980,18 @@ img {
     } */
 
     .hero__message{
-        margin-top: 15px;
-        padding: 15px;
+        padding: 60px;
     }
 
     .hero__title {
-        font-size: 20px;
+        font-size: 34px;
         line-height: 1.44;
         font-weight: 700;
     }
 
     .hero__text {
-        font-size: 18px;
+        margin-top: 30px;
+        font-size: 24px;
         line-height: 1.44;
         font-weight: 300;
     }
