@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     background-color: var(--bg-black-50);
 }
     
@@ -362,6 +362,7 @@ img {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 /* .hero img {
@@ -371,7 +372,7 @@ img {
 
 .hero__video-section{
     width: 100%;
-    background-image: url(./video/promo.PNG);
+    background-image: url(./video/introjpg.jpg);
     background-position: center;
     mask-repeat: no-repeat;
     background-size: cover;
@@ -426,7 +427,7 @@ img {
 .container--about {
     background-image: url(./img/bg/bg-img.jpg);
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .about {
@@ -482,7 +483,7 @@ img {
 .container--proces{
     background-color: var(--text-black);
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .proces {
@@ -597,6 +598,7 @@ img {
     margin-top: 30px;
     background-image: url(./img/bg/bgd-btn-white.png);
     background-color: var(--text-black);
+    background-repeat: no-repeat;
     width: 472px;
     height: 127px;
     border: 2px solid var(--text-black);
@@ -871,7 +873,15 @@ img {
     }
 
     .hero {
-        padding-top: 100px;
+        padding-top: 80px;
+        overflow: hidden;
+    }
+
+    .hero__video{
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .nav, .soc-link {
@@ -955,12 +965,16 @@ img {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 60px;
     }
 
-    .hero img {
-        width: 290px;
+    .hero__video{
+        width: auto;
     }
+
+    /* .hero img {
+        width: 290px;
+    } */
 
     .hero__message{
         margin-top: 15px;
