@@ -470,7 +470,7 @@ img {
     border-radius: 30px;
     margin-bottom: 40px;
     border: 0;
-    background-image: url(./img/bg/bgd-btn.jpg);
+    background-image: url(./img/bg/bgd-btn.png);
     font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 700;
@@ -633,7 +633,7 @@ img {
 }
 
 .btn:hover,.btn:focus {
-    border: 2px solid var(--theme-accent);
+    color: var(--theme-accent);
 }
 
 /* My work END */
