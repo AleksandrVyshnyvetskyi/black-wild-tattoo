@@ -27,5 +27,6 @@ menu.addEventListener("click", function (e) {
 menuBtn.addEventListener("click", () => {
   setTimeout(() => {
     menu.classList.remove("open");
+    menuBtn.classList.remove("active");
   }, 5000);
 });
