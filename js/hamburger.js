@@ -15,3 +15,17 @@ menuBtn.addEventListener("click", function () {
   menuBtn.classList.toggle("open");
   menu.classList.toggle("open");
 });
+
+menu.addEventListener("click", function (e) {
+  if (e.target.matches("a")) {
+    menu.classList.remove("open");
+    menuBtn.classList.toggle("open");
+    menuBtn.classList.remove("active");
+  }
+});
+
+menuBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    menu.classList.remove("open");
+  }, 5000);
+});

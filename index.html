@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="./js/library/notiflix-Notiflix-dfaf93f/dist/notiflix-3.2.5.min.css"
+    />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="./js/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
@@ -172,12 +176,12 @@
           </li>
           <li class="about__item">
             <p class="text about__text">
-              Ціни по телефону, за запитом або на сайті.
+              Ціни за телефоном або за запитом на сайті.
             </p>
           </li>
           <li class="about__item">
-            <button class="btn" type="button" id="call-form-btn">
-              Дiзнатися бiльше
+            <button class="btn" type="button">
+              <a href="#contact">Дiзнатися бiльше</a>
             </button>
           </li>
         </ul>
@@ -284,7 +288,9 @@
             <img src="./CSS/img/work/work12.jpg" alt="my works" width="200" />
           </li>
         </ul>
-        <button class="btn" type="button">Дiзнатися цiну</button>
+        <button class="work__btn" type="button">
+          <a href="#contact">Дiзнатися цiну</a>
+        </button>
       </div>
       <img class="bg-img-bottom" src="./CSS/img/border_2.png" alt="" />
     </div>
@@ -363,13 +369,71 @@
                 </a>
                 Instagram
               </li>
+              <li class="contact__link--item">
+                <a
+                  class="contact__link--icon"
+                  target="_blank"
+                  href="https://goo.gl/maps/wdFm7C2uxr1xir727"
+                >
+                  <svg class="icon-svg" width="40px" height="40px">
+                    <use
+                      xlink:href="./CSS/img/svg/symbol-defs.svg#icon-map"
+                    ></use>
+                  </svg>
+                </a>
+                Location
+              </li>
             </ul>
-            <a
-              class="btn"
-              target="_blank"
-              href="https://goo.gl/maps/wdFm7C2uxr1xir727"
-              >Location</a
-            >
+            <div class="tg-form">
+              <h3 class="title__form">Напиши мені, а я передзвоню !</h3>
+              <form id="tg-form">
+                <div class="form__group">
+                  <label class="form__label" for="name">Ім'я</label>
+                  <input
+                    type="text"
+                    class="form__input validation"
+                    name="name"
+                    id="name"
+                    placeholder="Мене звати..."
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="tel">Телефон</label>
+                  <input
+                    type="tel"
+                    class="form__input validation"
+                    name="tel"
+                    id="tel"
+                    autocomplete="off"
+                    placeholder="+380(__) ___-__-__"
+                    data-phone-pattern
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="textarea">Текст</label>
+                  <textarea
+                    type="text"
+                    class="form__input form__text-area validation"
+                    name="textarea"
+                    id="textarea"
+                    autocomplete="off"
+                    placeholder="Я хочу запитати..."
+                    required
+                  ></textarea>
+                </div>
+                <button class="work__btn btn-submit" type="submit">
+                  Відправити
+                  <svg class="icon-svg" width="40px" height="40px">
+                    <use
+                      href="./CSS/img/svg/symbol-defs.svg#icon-sendMessage"
+                    ></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="created">
@@ -386,55 +450,6 @@
 
     <!-- ===== Contact END ===== -->
 
-    <!-- ===== Main content END ===== -->
-
-    <div class="modal-conteiner" id="modal-form">
-      <form action="#" class="model-form" netlify>
-        <button class="close-icon" id="modal-form-close">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="white"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
-            />
-          </svg>
-        </button>
-
-        <h4 class="model-form-title">Якщо тебе зацiкавила iнформацiя</h4>
-        <p class="modal-form-text">просто залиши свої контакти</p>
-
-        <div class="model-form-field">
-          <label for="model-form-name" class="model-form-field-label"
-            >Iм'я</label
-          >
-          <input
-            type="text"
-            class="model-form-name"
-            id="model-form-name"
-            name="Имя"
-          />
-        </div>
-        <div class="model-form-field">
-          <label for="model-form-email" class="model-form-field-label"
-            >Телефон</label
-          >
-          <input
-            type="tel"
-            class="model-form-email"
-            id="model-form-email"
-            name="Email"
-          />
-        </div>
-        <button type="submit" class="model-form-sabmit">
-          Вiдправити бандероголубом
-        </button>
-      </form>
-    </div>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -442,6 +457,8 @@
     ></script>
     <script src="./js/slick/slick.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/library/notiflix-Notiflix-dfaf93f/dist/notiflix-3.2.5.min.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/hamburger.js"></script>
   </body>
