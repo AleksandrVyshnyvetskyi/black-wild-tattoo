@@ -25,7 +25,6 @@ form.addEventListener("submit", function (event) {
       this.name.value = "";
       this.tel.value = "";
       this.textarea.value = "";
-      console.log("аксиос запустился !");
       Notiflix.Report.success(
         "Super !",
         "Твоє повідомлення вже в мене !",
@@ -42,7 +41,6 @@ form.addEventListener("submit", function (event) {
       );
     })
     .catch((error) => {
-      console.log("функция дала ошибку !");
       Notiflix.Report.failure(
         "Oopps...",
         "Щось пішло не так, спробуй ще !",
@@ -86,23 +84,23 @@ form.addEventListener("submit", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var eventCalllback = function (e) {
-    var el = e.target,
+  const eventCalllback = function (event) {
+    let el = event.target,
       clearVal = el.dataset.phoneClear,
       pattern = el.dataset.phonePattern,
       matrix_def = "+380(__) ___-__-__",
       matrix = pattern ? pattern : matrix_def,
       i = 0,
       def = matrix.replace(/\D/g, ""),
-      val = e.target.value.replace(/\D/g, "");
-    if (clearVal !== "false" && e.type === "blur") {
+      val = event.target.value.replace(/\D/g, "");
+    if (clearVal !== "false" && event.type === "blur") {
       if (val.length < matrix.match(/([\_\d])/g).length) {
-        e.target.value = "";
+        event.target.value = "";
         return;
       }
     }
     if (def.length >= val.length) val = def;
-    e.target.value = matrix.replace(/./g, function (a) {
+    event.target.value = matrix.replace(/./g, function (a) {
       return /[_\d]/.test(a) && i < val.length
         ? val.charAt(i++)
         : i >= val.length
@@ -110,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         : a;
     });
   };
-  var phone_inputs = document.querySelectorAll("[data-phone-pattern]");
+  const phone_inputs = document.querySelectorAll("[data-phone-pattern]");
   for (let elem of phone_inputs) {
     for (let ev of ["input", "blur", "focus"]) {
       elem.addEventListener(ev, eventCalllback);

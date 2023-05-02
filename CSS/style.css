@@ -2,10 +2,10 @@
     width: 5px;
     background-color: var(--bg-black-50);
 }
-    
+
 ::-webkit-scrollbar-thumb {
-        background-color: var(--theme-accent);
-        border-radius: 5px;
+    background-color: var(--theme-accent);
+    border-radius: 5px;
 }
 
 :root {
@@ -65,10 +65,6 @@ img {
     line-height: 1.77;
 }
 
-.text-accent {
-    color: var(--theme-accent);
-}
-
 .link {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
@@ -97,11 +93,9 @@ img {
     bottom: 0;
     
     transform: scaleX(0);
-    transform-origin: right, left;
+    transform-origin: right;
     transition: transform .5s ease;
-}
-
-.link:hover::after {
+}:hover::after {
     transform: scaleX(1.3);
 }
 
@@ -216,11 +210,11 @@ img {
 /* Header nav END */
 /* Header company START */
 
-.black-wild {
+.header-title{
     text-align: center;
 }
 
-.black-wild h1 {
+.header-title h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     line-height: 1.5;
@@ -232,7 +226,7 @@ img {
 /* Header company END */
 /* Hamburger menu START */
 
-.mobile-menu {
+.mobile-menu-box {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -241,7 +235,7 @@ img {
     z-index: 9;
 }
 
-.hamburger {
+.burger {
     position: relative;
     z-index: 15;
     width: 100%;
@@ -262,7 +256,7 @@ img {
     justify-content: space-evenly;
 }
 
-.hamburger .hamburger__line {
+.burger__line {
     display: block;
     width: 30px;
     height: 3px;
@@ -272,16 +266,16 @@ img {
     transition: transform .5s, opacity .25s;
 }
 
-.hamburger.active .hamburger__line:nth-child(1) {
+.burger.open .burger__line:nth-child(1) {
     transform: translateY(9px) 
     rotate(45deg);
 }
 
-.hamburger.active .hamburger__line:nth-child(2) {
+.burger.open .burger__line:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active .hamburger__line:nth-child(3) {
+.burger.open .burger__line:nth-child(3) {
     transform: translateY(-9px) 
     rotate(-45deg);
 }
@@ -303,7 +297,6 @@ img {
 	transform: translateY(0);
     top: 58px;
 }
-
 
 .dropdown-menu__item {
     width: 595px;
@@ -335,26 +328,7 @@ img {
     color: var(--text-white);
 }
 
-.menu-active {
-    display: block;
-}
-
 /* Hamburger menu END */
-/* Header social link START */
-
-.soc-link__box {
-    display: flex;
-}
-
-.soc-link__item {
-    margin-right: 29px;
-}
-
-.soc-link__item:last-child {
-    margin-right: 0;
-}
-
-/* Header social link END */
 /* Header END */
 
 /* Main content START */
@@ -396,6 +370,15 @@ img {
     width: 100%;
 }
 
+.hero__message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:15px;
+    position: absolute;
+    z-index: 3;
+}
+
 .hero__title {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
@@ -407,13 +390,8 @@ img {
     align-items: center;
 }
 
-.hero__message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:15px;
-    position: absolute;
-    z-index: 3;
+.hero__title--accent {
+    color: var(--theme-accent);
 }
 
 .hero__text {
@@ -429,7 +407,7 @@ img {
 /* Hero END */
 /* About START */
 
-.container--about {
+.container--white {
     background-image: url(./img/bg/bg-img.png);
     padding: 75px 0;
 }
@@ -449,38 +427,52 @@ img {
     text-align: center;
 }
 
-.about__text {
+.text--about {
     color: var(--text-black);
     margin-bottom: 30px;
     font-size: 20px;
 }
 
-.about__title {
+.title--about {
     color: var(--text-black);
     margin-bottom: 20px;
 }
 
-.about__item .btn {
+.btn {
     width: 472px;
     height: 127px;
     border-radius: 30px;
     margin-bottom: 40px;
     border: 0;
-    background-image: url(./img/bg/bgd-btn.png);
     cursor: pointer;
-
-}
-
-.about__item .btn a{
-    color: var(--text-white);
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.33;
+    transition: all 0.3s ease;
+    color: var(--text-black);
 }
 
-.about__item .btn a:hover,.btn:focus {
+.btn a {
+    color: inherit;
+}
+
+.btn--white{
+    background-image: url(./img/bg/bgd-btn.png);
+    background-repeat: no-repeat;
+    color: var(--text-white);
+}
+
+.btn--black {
+    background-image: url(./img/bg/bgd-btn-white.png);
+    background-color: var(--text-black);
+    background-repeat: no-repeat;
+}
+
+.btn:hover,:focus {
     color: var(--theme-accent);
     border: 0;
 }
@@ -488,14 +480,13 @@ img {
 /* About END */
 /* Tattoo proces START */
 
-.container--proces{
+.container--black{
     background-color: var(--text-black);
     position: relative;
     padding: 150px 0;
 }
 
-.proces {
-    
+.proces-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -506,7 +497,7 @@ img {
     margin-bottom: 20px;
 }
 
-.proces iframe {
+.proces-box iframe {
     width: 560px;
     height: 315px;
     border: 1px solid var(--text-white);
@@ -525,12 +516,7 @@ img {
     bottom: -1px;
 }
 
-.container--says {
-    background-image: url(./img/bg/bg-img.png);
-    padding: 150px 0;
-}
-
-.says {
+.says-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -566,12 +552,6 @@ img {
 /* Says END */
 /* My work START */
 
-.container--work{
-    background-color: var(--text-black);
-    position: relative;
-    padding: 150px 0;
-}
-
 .work {
     display: flex;
     flex-direction: column;
@@ -585,6 +565,7 @@ img {
 
 .work__box {
     width: 960px;
+    margin-bottom: 30px;
 }
 
 .work__item {
@@ -608,36 +589,6 @@ img {
     border: 2px solid var(--theme-accent);
 }
 
-.work__btn {
-    margin-top: 30px;
-    background-image: url(./img/bg/bgd-btn-white.png);
-    background-color: var(--text-black);
-    background-repeat: no-repeat;
-    width: 472px;
-    height: 127px;
-    border: 2px solid var(--text-black);
-    border-radius: 30px;
-    font-family: 'EB Garamond', serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.33;
-    color: var(--text-black);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.work .work__btn a{
-    color: var(--text-black);
-    transition: all 0.3s ease;
-    font-family: 'EB Garamond', serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.33;
-}
-
-.work__btn a:hover {
-    color: var(--theme-accent);
-}
 
 /* My work END */
 /* Contact START */
@@ -714,7 +665,7 @@ img {
     fill: currentColor;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -781,36 +732,17 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-black);
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover,:focus {
+    color: var(--theme-accent);
 }
 
 .btn-submit svg {
     margin-left: 10px;
 }
-
-/* .btn-submit {
-    background-color: #202127;
-    border: 0;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 15px;
-    color: var(--theme-accent);
-    font-size: 28px;
-} */
-
-/* .contact .btn {
-    color: var(--text-black);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact .btn:hover {
-    color: var(--theme-accent);
-} */
 
 .created {
     margin: 100px 0;
@@ -827,12 +759,16 @@ form {
         border-bottom: 2px solid var(--text-black);
         padding: 0;
         position: fixed;
-        z-index: 3;
+        z-index: 99;
         right: 0;
         left: 0;
         }
 
-    .mobile-menu {
+    .nav {
+        display: none;
+    }
+
+    .mobile-menu-box {
         display: flex;
     }
 
@@ -850,14 +786,10 @@ form {
     }
 
     .hero__video{
-        width: 100%;
+        width: auto;
         height: 100vh;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .nav, .soc-link {
-        display: none;
     }
 
     .work__box {
@@ -869,11 +801,11 @@ form {
         height: 280px;
     }
 
-    .black-wild {
+    .header-title {
         display: none;
     }
 
-    .hamburger {
+    .burger {
         display: flex;
         font-size: 24px;
     }
@@ -888,22 +820,19 @@ form {
 
 @media (max-width:767px) {
 
-    .header {
-        width: 100%;
-        padding: 0;
-        position: fixed;
-        z-index: 99;
+    .container--black, .container--white {
+        padding: 75px 0;
     }
 
-    .mobile-menu {
+    .mobile-menu-box {
         display: flex;
     }
 
-    .black-wild h1 {
+    .header-title h1 {
         display: none;
     }
 
-    .hamburger {
+    .burger {
         display: flex;
         font-size: 16px ;
     }
@@ -945,9 +874,9 @@ form {
         text-align: center;
     }
 
-    .hero__video{
+    /* .hero__video{
         width: auto;
-    }
+    } */
 
     .hero__message{
         padding: 60px;
@@ -975,12 +904,12 @@ form {
 
     }
 
-    .about__text {
+    .text--about {
         margin-bottom: 30px;
         font-size: 20px;
     }
 
-    .about .btn {
+    .btn {
         color: #2f303a;
         width: 280px;
         height: 50px;
@@ -992,29 +921,20 @@ form {
         transition: all 0.3s ease;
     }
 
-    .about .btn:focus {
-        color:  #2f303a;
-        background-color: #fff;
-    }
-
-    .about .btn a {
-        color: #2f303a;
+    .btn:hover{
+        background-color: var(--text-white);
+        border: 2px solid var(--theme-accent);
     }
 
     /* About mobile END */
     /* Proces mobile START */
-
-    .conteiner-proces {
-        margin: auto;
-        padding: 15px;
-    }
 
     .proces__title {
         font-size: 24px;
         line-height: 1.44;
     }
 
-    .proces iframe {
+    .proces-box iframe {
         width: 290px;
         height: 175px;
         margin-bottom: 20px;
@@ -1022,10 +942,6 @@ form {
 
         /* Proces mobile END */
         /* Says mobile START */
-
-    .container--says {
-        padding: 150px 15px;
-    }
 
     .img-say {
         margin: 15px;
@@ -1049,7 +965,6 @@ form {
         width: 85%;
     }
 
-
     .work__item {
         border: 2px solid var(--text-white);
         border-radius: 20px;
@@ -1057,28 +972,13 @@ form {
         width: 260px;
     }
 
-        /* Work mobile END */
-
-    .work__btn{
-        margin: 20px auto 0 auto;
-        
-        color: #2f303a;
-        width: 280px;
-        height: 50px;
-        background-color: #f3b121;
-        background-image: none;
-        border: 2px solid black;
-        font-size: 20px;
-        margin-bottom: 20px;
-        transition: all 0.3s ease;
-    }
-
-    .work__btn:focus {
-        color:  #2f303a;
-        background-color: #fff;
-    }
+    /* Work mobile END */
 
     /* Contact mobile START */
+
+    .container--contact {
+    padding: 50px 0;
+    }
 
     .contact {
         margin: auto;
@@ -1105,7 +1005,7 @@ form {
         font-size: 24px;
         line-height: 1.44;
         margin-top: 20px;
-}
+    }
 
     .form__group{
         width: 90%;
@@ -1121,5 +1021,4 @@ form {
     }
 
     /* Contact mobile END */
-    
 }
