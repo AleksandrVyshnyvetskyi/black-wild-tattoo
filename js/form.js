@@ -83,23 +83,26 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const eventCalllback = function (event) {
-    let el = event.target,
-      clearVal = el.dataset.phoneClear,
-      pattern = el.dataset.phonePattern,
-      matrix_def = "+380(__) ___-__-__",
-      matrix = pattern ? pattern : matrix_def,
-      i = 0,
-      def = matrix.replace(/\D/g, ""),
-      val = event.target.value.replace(/\D/g, "");
+function maskPhoneNumbers() {
+  const eventCallback = function (event) {
+    const el = event.target;
+    const clearVal = el.dataset.phoneClear;
+    const pattern = el.dataset.phonePattern;
+    const matrixDef = "+380(__) ___-__-__";
+    const matrix = pattern ? pattern : matrixDef;
+    const def = matrix.replace(/\D/g, "");
+    let val = event.target.value.replace(/\D/g, "");
+    let i = 0;
+
     if (clearVal !== "false" && event.type === "blur") {
       if (val.length < matrix.match(/([\_\d])/g).length) {
         event.target.value = "";
         return;
       }
     }
+
     if (def.length >= val.length) val = def;
+
     event.target.value = matrix.replace(/./g, function (a) {
       return /[_\d]/.test(a) && i < val.length
         ? val.charAt(i++)
@@ -108,10 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
         : a;
     });
   };
-  const phone_inputs = document.querySelectorAll("[data-phone-pattern]");
-  for (let elem of phone_inputs) {
-    for (let ev of ["input", "blur", "focus"]) {
-      elem.addEventListener(ev, eventCalllback);
-    }
-  }
+
+  const phoneInputs = document.querySelectorAll("[data-phone-pattern]");
+  phoneInputs.forEach(function (elem) {
+    ["input", "blur", "focus"].forEach(function (ev) {
+      elem.addEventListener(ev, eventCallback);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  maskPhoneNumbers();
 });

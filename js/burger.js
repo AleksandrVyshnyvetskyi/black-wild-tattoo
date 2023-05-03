@@ -6,15 +6,15 @@ burger.addEventListener("click", function () {
   menu.classList.toggle("open");
 });
 
-burger.addEventListener("click", () => {
-  setTimeout(() => {
-    menu.classList.remove("open");
-    burger.classList.remove("open");
-  }, 3000);
-});
+// burger.addEventListener("click", () => {
+//   setTimeout(() => {
+//     menu.classList.remove("open");
+//     burger.classList.remove("open");
+//   }, 3000);
+// });
 
-menu.addEventListener("click", function (e) {
-  if (e.target.matches("a")) {
+menu.addEventListener("click", function (event) {
+  if (event.target.matches("a")) {
     menu.classList.remove("open");
     burger.classList.remove("open");
   }

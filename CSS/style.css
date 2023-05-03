@@ -700,6 +700,7 @@ img {
     border-radius: 25px;
     color: var(--text-white);
     display: flex;
+    align-items: center;
     height: 50px;
     width: 500px;
     max-width: 500px;
