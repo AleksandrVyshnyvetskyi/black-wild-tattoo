@@ -339,7 +339,7 @@ img {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
+/*     position: relative; */
 }
 
 .hero__video-section{
@@ -350,6 +350,9 @@ img {
     background-size: cover;
     display: flex;
     justify-content: center;
+	position: relative;
+	width: 100%;
+    overflow-x: hidden;
 }
 
 .hero__video-section::after{
