@@ -59,7 +59,7 @@ img {
 }
 
 .text {
-    /* font-family: 'EB Garamond', serif; */
+    font-family: 'EB Garamond', serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.77;
@@ -451,7 +451,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* font-family: 'EB Garamond', serif; */
+    font-family: 'EB Garamond', serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.33;
