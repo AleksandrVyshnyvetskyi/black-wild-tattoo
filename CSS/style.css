@@ -500,10 +500,9 @@ img {
     margin-bottom: 20px;
 }
 
-.proces-box iframe {
-    width: 560px;
-    height: 315px;
-    border: 1px solid var(--text-white);
+.process__video{
+    width: 60%;
+    height: 60%;
 }
 
 /* Tattoo proces END */
@@ -796,6 +795,11 @@ img {
         margin-right: auto;
     }
 
+    .process__video{
+    width: 95%;
+    height: 95%;
+    }
+
     .work__box {
         width: 600px;
     }
@@ -936,12 +940,6 @@ img {
     .proces__title {
         font-size: 24px;
         line-height: 1.44;
-    }
-
-    .proces-box iframe {
-        width: 290px;
-        height: 175px;
-        margin-bottom: 20px;
     }
 
         /* Proces mobile END */
