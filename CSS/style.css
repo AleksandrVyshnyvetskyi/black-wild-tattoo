@@ -181,16 +181,18 @@ img {
 
 /* Header START */
 
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 30px;
-    position: absolute;
-    top: 0;
-    left: 10%;
-    right: 10%;
-    z-index: 2;
 }
 
 /* Header nav START */
@@ -220,7 +222,7 @@ img {
     line-height: 1.5;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-white);
+    color: var(--theme-accent);
 }
 
 /* Header company END */
